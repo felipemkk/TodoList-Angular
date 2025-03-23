@@ -1,0 +1,67 @@
+.modal {
+        max-width: 900px;
+        margin: 30px auto;
+        overflow: auto;
+        min-height: 100;
+        border: 1px solid steelblue;
+        padding: 30px;
+        border-radius: 5px;
+      
+}
+.btn-new {
+    display: inline-block;
+    background: #adcfd6;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: inherit;
+  }
+
+  .btn-new:hover {
+    display: inline-block;
+    background: #3cadc4;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: inherit;
+  }
+.btn-cancel {
+    display: inline-block;
+    background: #d6a4a4;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: inherit;
+  }
+  .btn-cancel:hover {
+    display: inline-block;
+    background: lightcoral;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: inherit;
+  }
+
+  .btn:active {
+    transform: scale(0.8);
+  }

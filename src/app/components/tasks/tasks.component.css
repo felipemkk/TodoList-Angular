@@ -1,0 +1,14 @@
+.newtask {
+    background-color: #A8E8A8; /* Verde claro */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+  }
+  
+.newtask:hover {
+    background-color: #8CC68C; /* Verde um pouco mais escuro */
+  }

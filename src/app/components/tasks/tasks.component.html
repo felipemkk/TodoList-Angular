@@ -1,1 +1,10 @@
-<app-item *ngFor="let tarefa of tarefas" [tarefa]="tarefa"></app-item>
+
+<button type="button" class="newtask" (click)="exibirModal = true">Nova Tarefa</button>
+
+<app-modal *ngIf="exibirModal" 
+(tarefaAdicionada)="novaTarefa($event)" 
+(tarefaCancelada)="fecharModal()"></app-modal>
+
+
+<app-item *ngFor="let tarefa of tarefas" [tarefa]="tarefa"
+(statusAlterado)="atualizarStatusTarefa($event)"></app-item>

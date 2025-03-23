@@ -4,3 +4,9 @@
     cursor: pointer;
     padding: 10px 20px;
 }
+
+.task.reminder{
+    border-left: 5px solid green;
+    border-bottom: 5px solid green;
+    text-decoration: line-through;
+}

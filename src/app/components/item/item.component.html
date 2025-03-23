@@ -1,4 +1,9 @@
-<div class="task">
+<div class="task"
+(dblclick)="mudarStatus(tarefa)"
+[ngClass]="{reminder: tarefa.concluido}"
+>
+<input type="checkbox" [(ngModel)]="taskCheckBox">
+<label for="meuCheckbox">Marque esta caixa</label>
     <h3>{{tarefa.tarefa}}</h3>
     <p>{{tarefa.categoria}}</p>
 </div>
