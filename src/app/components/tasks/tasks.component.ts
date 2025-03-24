@@ -15,13 +15,16 @@ export class TasksComponent {
 
   exibirModal = false;
   
+  
   tarefas: tarefa [] = [
     {id: 1, tarefa: "Comprar pão", categoria: "Mercado", concluido: true},
     {id: 2, tarefa: "Estudar Angular", categoria: "Estudos", concluido: false},
   ]
 
   novaTarefa(novaTarefa: tarefa): void {
-    this.tarefas.push(novaTarefa);
+    const novoId = this.tarefas.length > 0 ? Math.max(...this.tarefas.map(t => t.id)) +1:1;
+    const tarefaComId = {...novaTarefa, id: novoId};
+    this.tarefas.push(tarefaComId)
     this.exibirModal = false; // Fecha o modal após adicionar a tarefa
   }
 
@@ -32,6 +35,10 @@ export class TasksComponent {
         tarefa.concluido = !tarefa.concluido;
   }
 
+  deletarTarefa(tarefa: tarefa): void {
+    console.log("Tarefa recebida para deletar:", tarefa);
+    this.tarefas = this.tarefas.filter(t => t.id !== tarefa.id);
+  }
 }
 export interface tarefa {
   id: number,
@@ -43,4 +50,3 @@ export interface tarefa {
 
 
 
- 

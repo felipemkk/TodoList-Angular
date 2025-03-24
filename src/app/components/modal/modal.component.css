@@ -8,10 +8,30 @@
         border-radius: 5px;
       
 }
+
+.input-tarefa{
+  padding: 8px;
+  margin-right: 10px;
+  border: 1px solid steelblue;
+  border-radius: 10px;
+  font-size: 14px;
+
+}
+
+.input-cat{
+  padding: 8px;
+  margin-right: 10px;
+  border: 1px solid steelblue;
+  border-radius: 10px;
+  font-size: 14px;
+
+}
+
+
 .btn-new {
     display: inline-block;
-    background: #adcfd6;
-    color: #fff;
+    background: #5bb0f6;
+    color: rgb(255, 255, 255);
     border: none;
     padding: 10px 20px;
     margin: 5px;
@@ -24,7 +44,7 @@
 
   .btn-new:hover {
     display: inline-block;
-    background: #3cadc4;
+    background: #128df2;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -37,8 +57,8 @@
   }
 .btn-cancel {
     display: inline-block;
-    background: #d6a4a4;
-    color: #fff;
+    background: #f65b5b;
+    color: rgb(255, 255, 255);
     border: none;
     padding: 10px 20px;
     margin: 5px;
@@ -50,7 +70,7 @@
   }
   .btn-cancel:hover {
     display: inline-block;
-    background: lightcoral;
+    background: #fa0707;
     color: #fff;
     border: none;
     padding: 10px 20px;

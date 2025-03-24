@@ -1,9 +1,28 @@
-<div class="task"
-(dblclick)="mudarStatus(tarefa)"
-[ngClass]="{reminder: tarefa.concluido}"
->
-<input type="checkbox" [(ngModel)]="taskCheckBox">
-<label for="meuCheckbox">Marque esta caixa</label>
-    <h3>{{tarefa.tarefa}}</h3>
-    <p>{{tarefa.categoria}}</p>
-</div>
+<div class="task" (dblclick)="mudarStatus(tarefa)" [ngClass]="{ reminder: tarefa.concluido }">
+    <h3>{{ tarefa.tarefa }}</h3>
+    <p>Id: {{ tarefa.id }}</p>
+    <p>{{ tarefa.categoria }}</p>
+  
+    <div class="botoes">
+      <div>
+        <button (click)="editarTarefa()" class="botaoeditar">
+          Editar Tarefa
+        </button>
+      </div>
+      <div>
+        <button (click)="deletarTarefa()" class="botaoexcluir">
+          Excluir Tarefa
+        </button>
+      </div>
+    </div>
+  
+    <div class="modalAlterar" *ngIf="modalAlterar">
+      <div class="modal-content">
+        <h2>Alterar tarefa</h2>
+        <input type="text" name="novadesc" placeholder="Nova Descrição">
+        <input type="text" name="novacat" placeholder="Nova Categoria">
+        <button class="salvarEdicao">Salvar</button>
+        <button class="cancelarEdicao" (click)= fecharModal()>Cancelar</button>
+      </div>
+    </div>
+  </div>

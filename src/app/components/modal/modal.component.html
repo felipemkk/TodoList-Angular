@@ -1,7 +1,7 @@
 <div class="modal">
     <h2>Nova Tarefa</h2>
-    <input type="text" [(ngModel)]="novaTarefa.tarefa" placeholder="Tarefa">
-    <input type="text" [(ngModel)]="novaTarefa.categoria" placeholder="Categoria">
+    <input type="text" class="input-tarefa" [(ngModel)]="novaTarefa.tarefa" placeholder="Tarefa">
+    <input type="text" class="input-cat" [(ngModel)]="novaTarefa.categoria" placeholder="Categoria">
     <button class="btn-new" (click)="adicionarTarefa()">Adicionar</button>
     <button class="btn-cancel" (click)="cancelarTarefa()">Cancelar </button>
   </div>
