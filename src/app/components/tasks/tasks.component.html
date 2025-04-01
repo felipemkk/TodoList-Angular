@@ -9,4 +9,5 @@
 
 <app-item *ngFor="let tarefa of tarefas" [tarefa]="tarefa"
 (statusAlterado)="atualizarStatusTarefa($event)"
-(deletar)="deletarTarefa($event)"></app-item>
+(deletar)="deletarTarefa($event)"
+(TarefaEditada)="editarTarefa($event)"></app-item>

@@ -3,9 +3,9 @@
     <p>Id: {{ tarefa.id }}</p>
     <p>{{ tarefa.categoria }}</p>
   
-    <div class="botoes">
+    <div  *ngIf="!tarefa.concluido" class="botoes">
       <div>
-        <button (click)="editarTarefa()" class="botaoeditar">
+        <button (click)="abrirEdicao()" class="botaoeditar">
           Editar Tarefa
         </button>
       </div>
@@ -19,9 +19,9 @@
     <div class="modalAlterar" *ngIf="modalAlterar">
       <div class="modal-content">
         <h2>Alterar tarefa</h2>
-        <input type="text" name="novadesc" placeholder="Nova Descrição">
-        <input type="text" name="novacat" placeholder="Nova Categoria">
-        <button class="salvarEdicao">Salvar</button>
+        <input type="text" name="novadesc" [(ngModel)]="tarefa.tarefa" placeholder="Nova Descrição">
+        <input type="text" name="novacat" [(ngModel)]="tarefa.categoria" placeholder="Nova Categoria">
+        <button class="salvarEdicao" (click)="editarTarefa()">Salvar</button>
         <button class="cancelarEdicao" (click)= fecharModal()>Cancelar</button>
       </div>
     </div>

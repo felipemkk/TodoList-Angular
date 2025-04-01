@@ -28,6 +28,19 @@ export class TasksComponent {
     this.exibirModal = false; // Fecha o modal após adicionar a tarefa
   }
 
+  
+    editarTarefa(tarefaEditada: tarefa) {
+      // Encontra o índice da tarefa que está sendo editada
+      const index = this.tarefas.findIndex(t => t.id === tarefaEditada.id);
+      
+      // Se encontrar a tarefa no array (index diferente de -1)
+      if (index !== -1) {
+        // Substitui a tarefa antiga pela nova versão editada
+        this.tarefas[index] = tarefaEditada;
+      }
+    } 
+  
+
   fecharModal(): void {
     this.exibirModal = false;
   }

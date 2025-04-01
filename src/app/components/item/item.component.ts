@@ -15,10 +15,11 @@ export class ItemComponent {
 @Input() tarefa!:tarefa;
 @Output() statusAlterado = new EventEmitter<tarefa>();
 @Output() deletar = new EventEmitter<tarefa>();
+@Output() TarefaEditada = new EventEmitter<tarefa>();
 
 modalAlterar = false;
 
-taskCheckBox: boolean = false;
+
 
 mudarStatus(tarefa: tarefa): void {
   this.statusAlterado.emit(this.tarefa);
@@ -28,8 +29,12 @@ mudarStatus(tarefa: tarefa): void {
     this.deletar.emit(this.tarefa);
     }
 
-    editarTarefa(){
+    abrirEdicao(){
       this.modalAlterar = !this.modalAlterar;
+    }
+    editarTarefa(){
+      this.TarefaEditada.emit(this.tarefa)
+      this.modalAlterar = false;
       }
 
       fecharModal(){

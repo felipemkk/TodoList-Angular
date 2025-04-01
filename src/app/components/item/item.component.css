@@ -1,14 +1,29 @@
 .task {
   position: relative; /* Garante que os botões absolutos sejam posicionados em relação à tarefa */
   background: #f4f4f4;
-  margin: 5px;
+  margin: 5px auto;
   cursor: pointer;
   padding: 10px 20px;
 }
 
-.task.reminder {
+/* .task.reminder {
   border-left: 10px solid green;
   text-decoration: line-through;
+} */
+.reminder {
+  text-decoration: line-through;
+  opacity: 0.7;
+  background-color: #f0f8f0;
+  border-left: 5px solid #4CAF50;
+  transition: all 0.3s ease;
+}
+
+.reminder h3 {
+  color: #666;
+}
+
+.reminder p {
+  color: #888;
 }
 
 .botoes {
